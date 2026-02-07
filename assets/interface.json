@@ -33,7 +33,7 @@
             "name": "Clash模拟器版",
             "label": "Clash",
             "path": [
-                "./resource/base",
+                "./resource",
                 "./resource_Clash"
             ],
             "controller": [
@@ -43,7 +43,7 @@
         {
             "name": "雷神加速器",
             "path": [
-                "./resource/base",
+                "./resource",
                 "./resource_LeiShen"
             ],
             "controller": [
