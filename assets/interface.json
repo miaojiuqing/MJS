@@ -30,7 +30,8 @@
     ],
     "resource": [
         {
-            "name": "Clash",
+            "name": "Clash模拟器版",
+            "label": "Clash",
             "path": [
                 "./resource/base",
                 "./resource_Clash"

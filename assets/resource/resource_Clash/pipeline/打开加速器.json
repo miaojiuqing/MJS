@@ -12,7 +12,8 @@
         ],
         "focus": {
             "Node.Action.Failed": "软件不存在于模拟器"
-        }
+        },
+        "timeout": -1
     },
     "已进入加速器主界面-将启用加速": {
         "recognition": {
