@@ -73,7 +73,7 @@
             "cases": [
                 {
                     "name": "边狱巴士",
-                    "icon": "./resource/base/image/雷神/游戏图标/边狱巴士-常用点击进入.png",
+                    "icon": "./resource/image/雷神/游戏图标/边狱巴士-常用点击进入.png",
                     "pipeline_override": {
                         "雷神加速器-已进入需要加速的游戏界面-开始加速": {
                             "recognition": {
@@ -100,7 +100,7 @@
                 },
                 {
                     "name": "卡厄斯梦境",
-                    "icon": "./resource/base/image/雷神/游戏图标/卡厄斯梦境-常用点击进入.png",
+                    "icon": "./resource/image/雷神/游戏图标/卡厄斯梦境-常用点击进入.png",
                     "pipeline_override": {
                         "雷神加速器-已进入需要加速的游戏界面-开始加速": {
                             "recognition": {
