@@ -1,0 +1,73 @@
+{
+    "小蓝猫-加速未开启": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    292,
+                    96,
+                    128,
+                    129
+                ],
+                "template": [
+                    "Clash/已停止.png"
+                ]
+            }
+        }
+    },
+    "停止加速后关闭加速器": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    288,
+                    0,
+                    204,
+                    109
+                ],
+                "template": [
+                    "Clash/已进入主界面.png"
+                ]
+            }
+        },
+        "next": [
+            "小蓝猫-加速已关闭",
+            "[JumpBack]小蓝猫-点击切换状态",
+            "[JumpBack]停止加速后关闭加速器"
+        ]
+    },
+    "小蓝猫-加速已关闭": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    292,
+                    96,
+                    128,
+                    129
+                ],
+                "template": [
+                    "Clash/已停止.png"
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "加速状态已停止",
+            "Node.Action.Succeeded": "软件已关闭"
+        },
+        "action": {
+            "type": "StopApp",
+            "param": {
+                "package": "com.github.kr328.clash" //clash的包名
+            }
+        }
+    },
+    "关闭加速器": {
+        "action": {
+            "type": "StopApp",
+            "param": {
+                "package": "com.github.kr328.clash" //clash的包名
+            }
+        }
+    }
+}

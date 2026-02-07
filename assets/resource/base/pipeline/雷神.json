@@ -1,0 +1,172 @@
+{
+    "雷神加速器-已进入首页": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    130,
+                    102
+                ],
+                "template": [
+                    "雷神/已进入雷神加速器主界面.png"
+                    // "Clash/已进入主界面.png"
+                ]
+            }
+        },
+        "next": [
+            "雷神加速器-已进入需要加速的游戏界面-开始加速",
+            "[JumpBack]雷神加速器-点击进入需要加速的游戏界面-常用",
+            "[JumpBack]雷神加速器-点击进入需要加速的游戏界面-侧边栏",
+            "雷神加速器-已进入首页"
+        ]
+    },
+    "雷神加速器-已进入需要加速的游戏界面-开始加速": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    74,
+                    87,
+                    111,
+                    111
+                ],
+                "template": [
+                    "雷神/游戏图标/边狱巴士-已进入.png"
+                ]
+            }
+        },
+        "next": [
+            "雷神加速器-加速已开启",
+            "[JumpBack]雷神加速器-点击开始加速",
+            "[JumpBack]雷神加速器-启动加速中"
+        ]
+    },
+    "雷神加速器-点击进入需要加速的游戏界面-常用": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    230,
+                    340,
+                    726,
+                    263
+                ],
+                "template": [
+                    "雷神/游戏图标/边狱巴士-常用点击进入.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 600
+    },
+    "雷神加速器-点击进入需要加速的游戏界面-侧边栏": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    89,
+                    720
+                ],
+                "template": [
+                    "雷神/游戏图标/边狱巴士-侧边栏点击进入.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 600
+    },
+    "雷神加速器-加速已开启": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    65,
+                    351,
+                    366,
+                    84
+                ],
+                "upper": [
+                    218,
+                    54,
+                    57
+                ],
+                "lower": [
+                    218,
+                    54,
+                    57
+                ],
+                "connected": true,
+                "count": 8000
+            }
+        }
+    },
+    "雷神加速器-加速未开启": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    65,
+                    351,
+                    366,
+                    84
+                ],
+                "upper": [
+                    232,
+                    232,
+                    232
+                ],
+                "lower": [
+                    232,
+                    232,
+                    232
+                ],
+                "connected": true,
+                "count": 8000
+            }
+        }
+    },
+    "雷神加速器-点击开始加速": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    65,
+                    351,
+                    366,
+                    84
+                ],
+                "expected": [
+                    "开始加速"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500
+    },
+    "雷神加速器-启动加速中": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    65,
+                    351,
+                    366,
+                    84
+                ],
+                "expected": [
+                    "加速.*"
+                ]
+            }
+        }
+    }
+}
