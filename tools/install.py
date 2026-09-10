@@ -14,7 +14,6 @@ except ModuleNotFoundError as e:
 
 from configure import configure_ocr_model
 
-
 working_dir = Path(__file__).parent.parent.resolve()
 install_path = working_dir / Path("install")
 version = len(sys.argv) > 1 and sys.argv[1] or "v0.0.1"
@@ -98,7 +97,6 @@ def install_deps():
         )
 
 
-
 def install_resource():
 
     configure_ocr_model()
@@ -106,6 +104,16 @@ def install_resource():
     shutil.copytree(
         working_dir / "assets" / "resource",
         install_path / "resource",
+        dirs_exist_ok=True,
+    )
+    shutil.copytree(
+        working_dir / "assets" / "resource_Clash",
+        install_path / "resource_Clash",
+        dirs_exist_ok=True,
+    )
+    shutil.copytree(
+        working_dir / "assets" / "resource_LeiShen",
+        install_path / "resource_LeiShen",
         dirs_exist_ok=True,
     )
     shutil.copy2(
